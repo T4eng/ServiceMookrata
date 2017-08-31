@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+      <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mookrata</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" /> <!-- Chart-->
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" /> <!-- Menubar-->
+      <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!--tagFirebase-->
+   <script src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper" >
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0;">
+            <div class="navbar-header" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Mookrata</a> 
+            </div>
+
+  <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 15px;"">
+</div>
+</nav>
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+					</li>									
+                    <li>
+                        <a class="active-menu"  href="index.html"><i class="fa fa-home fa-3x"></i> หน้าหลัก</a>
+                    </li>
+                    <li>
+                        <a href="service.html"><i class="fa fa-telegram fa-3x"></i> บริการ</a>
+                    </li>
+                     <li>
+                        <a href="table.html"><i class="fa fa-table fa-3x"></i> โต๊ะลูกค้า</a>
+                    </li>
+                    <li>
+                        <a href="menu.html"><i class="fa fa-comment fa-3x"></i> เมนูอาหาร</a>
+                    </li>
+						   <li  >
+                        <a href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> สรุปยอด</a>
+                    </li>	            
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>HOME</h2>   
+                        <h5>Welcome to Home.</h5>
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                      <hr />
+                <div class="row">
+  <a href="table1.html">
+  <div class="col-md-3 col-sm-6 col-xs-6">           
+      <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box" >
+                    <font size="4"><b>TABLE1</b></font>
+                    <br><span class="main-text" id="countorder1"></span>
+                </div>
+             </div>
+         </div>
+   </a>
+  
+  <a href="table2.html">       
+  <div class="col-md-3 col-sm-6 col-xs-6">           
+      <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-blue set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box" >
+                    <font size="4"><b>TABLE2</b></font>
+                    <br><span class="main-text" id="countorder2"></span>
+                </div>
+             </div>
+         </div>
+  </a> 
+
+  <a href="table3.html">   
+                    <div class="col-md-3 col-sm-6 col-xs-6">           
+      <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box" >
+                    <font size="4"><b>TABLE3</b></font>
+                    <br><span class="main-text" id="countorder3"></span>
+                </div>
+             </div>
+         </div>
+  </a> 
+      </div>
+                 <!-- /. ROW  -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-size:25px">
+                           รายการที่สั่งแล้ว
+                        </div>
+                        <div class="panel-body">
+                         <div class="table-responsive">
+                                
+                            <!--table query from app_index.js-->
+
+                                <div style="font-size:20px"><b>TABLE1</b></div>
+                                <div id="tbs1"></div>
+                            </div>
+                            <div class="table-responsive">
+                                <div style="font-size:20px"><b>TABLE2</b></div>
+                                <div id="tbs2"></div>
+                            </div>
+                             <div class="table-responsive">
+                                <div style="font-size:20px"><b>TABLE3</b></div>
+                                <div id="tbs3"></div>
+                            </div> 
+                 <!-- /. ROW  -->        
+            </div>
+         </div>
+
+    <!-- JQUERY SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!--App-->
+    <script type="text/javascript" src="app_index.js"></script> 
+
+</body>
+</html>
