@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html land="en">
 
 <head>
       <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mookrata</title>
      <!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -16,8 +16,16 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <!--tagFirebase-->
-   <script src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js"></script>
 
+
+
+
+<style>
+    input.ng-invalid {
+        background-color: #ADD9E6;
+    }
+</style>
 </head>
 
 <body>
@@ -82,14 +90,14 @@ font-size: 16px;">
                         <div class="panel-body">
                         <!--ส่วนเพิ่มเมนู-->
   <div class="container">
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover" ng-app="">
       <thead>
         <tr>
            <th>Menu
-    <input type="text" class="form-control" placeholder="Type Character it here" id="innames">
-           </th>
-           <th>Price
-    <input type="text" class="form-control float" placeholder="Type Number it here" id="inprices">
+    <input ng-model="myText1" required class="form-control" placeholder="Type Character it here" id="innames" >
+            </th>
+            <th ng-app="">Price
+    <input ng-model="myText2" required class="form-control float" placeholder="Type Number it here" id="inprices">
            </th>
            <th>
     <button class="btn btn-primary" onclick="saveOnClick()">add</button>
@@ -118,6 +126,7 @@ font-size: 16px;">
         </tr> 
       </thead>
 </div>
+
                             <div class="table-responsive">
 
                                 <!--table query from app_table.js-->
@@ -172,6 +181,8 @@ $(".float").bind( "keyup", function(e) {
 });
 </script>
 
+    <!-- AngularJS SCRIPTS -->
+    <script src="node_modules/angular/angular.min.js"></script>
     <!-- JQUERY SCRIPTS -->
     <script src="assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
@@ -181,6 +192,8 @@ $(".float").bind( "keyup", function(e) {
     
     <!--App-->
     <script type="text/javascript" src="app_menu.js"></script>
+
    
+  
 </body>
 </html>
